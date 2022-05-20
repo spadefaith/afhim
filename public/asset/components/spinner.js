@@ -1,0 +1,21 @@
+Cake.create('spinner','#spinner',{
+    handlers:{
+        destroy(e){
+            this.reset();
+        }
+    },
+    subscribe:{
+        spin:{
+            components:['api','app'],
+            handler(e){
+                this.render();
+            }
+        },
+        spinout:{
+            components:['api','app'],
+            handler(e){
+                this.fire.destroy();
+            } 
+        }
+    },
+});

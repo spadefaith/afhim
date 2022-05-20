@@ -1,0 +1,20 @@
+Cake.create('skeleton','#skeleton',{
+    animate:{
+        skeleton:{
+            render:{keyframes:['appear']},
+            remove:{keyframes:['disappear']},
+        },
+    },
+    handlers:{
+        destroy(e){
+            this.reset();
+        }
+    },
+    subscribe:{
+        product_list:{
+            removeSkeleton(){
+                this.fire.destroy();
+            }
+        }
+    },
+});

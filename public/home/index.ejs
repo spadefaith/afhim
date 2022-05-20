@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfHIM</title>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/asset/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/asset/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/asset/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/asset/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/asset/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/asset/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/asset/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/asset/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/asset/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/asset/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/asset/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/asset/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/asset/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/asset/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#F95438">
+    <meta name="msapplication-TileImage" content="/asset/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#F95438">
+
+
+
+    <link rel="stylesheet" href="/asset/package/bootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/css/splide.min.css">
+    
+    <link rel="stylesheet" href="/asset/css/product-list.css">
+    <link rel="stylesheet" href="/asset/css/skeleton.css">
+
+    <link rel="stylesheet" href="/asset/css/theme.css">
+    <link rel="stylesheet" href="/asset/css/custom.css">
+
+
+</head>
+<body>
+    <article class="container-lg">
+        <section id="app" data-component="app">
+            <header>
+
+ 
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-component="nav" id="nav">
+                    <!-- Container wrapper -->
+                    <div class="container-fluid">
+                    <!-- Toggle button -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        data-event="click:burger"
+                    >
+                        <i class="fa fa-bars"></i>
+                    </button>
+                
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" data-container="dropdown">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand mt-2 mt-lg-0 d-none d-md-none d-lg-block" href="#">
+                            <img src="/asset/images/logo.png" alt="AFHIM" height="40">
+                            &nbsp;
+                            <span>AFHIM Clothing</span>
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+                
+                    <div class=" d-md-block d-lg-none">
+                        <a class="navbar-brand middle mt-2 mt-lg-0">
+                            <img src="/asset/images/logo.png" alt="AFHIM" height="40">
+                            &nbsp;
+                            <span>AFHIM Clothing</span>
+                        </a>
+                    </div>
+
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                        <!-- Icon -->
+                        <a class="text-reset me-3" href="#">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                
+                        <!-- Notifications -->
+                        <div class="dropdown">
+                            <a
+                                class="text-reset me-3 dropdown-toggle hidden-arrow"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="fa fa-bell"></i>
+                                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                            </a>
+                            <ul
+                                class="dropdown-menu dropdown-menu-end"
+                                aria-labelledby="navbarDropdownMenuLink"
+                            >
+                                <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                                </li>
+                                <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                                </li>
+                                <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Avatar -->
+                        <div class="dropdown">
+                            <a
+                                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                                href="#"
+                                id="navbarDropdownMenuAvatar"
+                                role="button"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <img
+                                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                                class="rounded-circle"
+                                height="25"
+                                alt="Black and White Portrait of a Man"
+                                loading="lazy"
+                                />
+                            </a>
+                            <ul
+                                class="dropdown-menu dropdown-menu-end"
+                                aria-labelledby="navbarDropdownMenuAvatar"
+                            >
+                                <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                                </li>
+                                <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Right elements -->
+                    </div>
+                    <!-- Container wrapper -->
+                </nav>
+                <!-- Navbar -->
+
+
+                
+              
+                <!-- Jumbotron -->
+                <div class=" text-center bg-light" class="carousel-container" data-component="carousel" id="carousel">
+                    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="/asset/images/banner/genz1.jpg" alt="">
+                                </li>
+
+                                <!-- <li class="splide__slide">
+                                    <img src="/asset/images/banner/genz2.jpg" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="/asset/images/banner/genz3.jpg" alt="">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="/asset/images/banner/genz4.jpg" alt="">
+                                </li> -->
+
+                                <li class="splide__slide" data-for="item of banners">
+                                    <img data-src="{{item.image}}" alt="">
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <!-- Jumbotron -->
+              </header>
+
+              
+
+
+
+        </section>
+        <br>
+
+        <section class="product-list-container">
+            <section class="product-list-content" data-component="skeleton" id="skeleton" data-animate='ns:skeleton'>
+                <div class="skeleton card  loading " >
+                    <div class="image">
+                      
+                    </div>
+                    <div class="content">
+                      <h4 class='h4'></h4>
+                      <div class="description">
+                        
+                      </div>
+                    </div>
+                </div>
+                <div class="skeleton card  loading ">
+                    <div class="image">
+                      
+                    </div>
+                    <div class="content">
+                      <h4 class='h4'></h4>
+                      <div class="description">
+                        
+                      </div>
+                    </div>
+                </div>
+                <div class="skeleton card  loading ">
+                    <div class="image">
+                      
+                    </div>
+                    <div class="content">
+                      <h4 class='h4'></h4>
+                      <div class="description">
+                        
+                      </div>
+                    </div>
+                </div>
+                <div class="skeleton card  loading ">
+                    <div class="image">
+                      
+                    </div>
+                    <div class="content">
+                      <h4 class='h4'></h4>
+                      <div class="description">
+                        
+                      </div>
+                    </div>
+                </div>
+                <div class="skeleton card  loading ">
+                    <div class="image">
+                      
+                    </div>
+                    <div class="content">
+                      <h4 class='h4'></h4>
+                      <div class="description">
+                        
+                      </div>
+                    </div>
+                </div>
+                <div class="skeleton card  loading ">
+                    <div class="image">
+                      
+                    </div>
+                    <div class="content">
+                      <h4 class='h4'></h4>
+                      <div class="description">
+                        
+                      </div>
+                    </div>
+                </div>
+            </section>
+
+          </section>
+        
+    </article>
+    <template id="product_list">
+
+        <section class="product-list-content">
+            <div class="card hide" data-for="item of products" >
+                <div class="card-body">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <img data-src="{{item.image}}" alt="{{item.image}}">
+                            <p class="quickview">Quick View</p>
+                        </div>
+                        <div class="product-text-container">
+                            <p>{{item.category}}</p>
+                            <p>{{item.title}}</p>
+                            <!-- <p>{{item.description}}</p> -->
+                            <!-- <p>{{item.id}}</p> -->
+                            <p>PHP {{item.price}}</p>
+        
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </template>
+    <template id="spinner">
+        <div class="spinner-container">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/js/splide.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="http://localhost:8794/asset/cake.js"></script>
+
+    <script src="/router.js"></script>
+
+    <script src="/asset/components/app.js"></script>
+    <script src="/asset/components/api.js"></script>
+    <script src="/asset/components/carousel.js"></script>
+    <script src="/asset/components/nav.js"></script>
+    <script src="/asset/components/skeleton.js"></script>
+    <script src="/asset/components/alert.js"></script>
+    <script src="/asset/components/spinner.js"></script>
+    <script src="/asset/components/product-list.js"></script>
+</body>
+</html>
