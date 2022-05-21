@@ -1,7 +1,7 @@
 const router = new Cake.Router({
-    '/':{
-        name:'home',
-        display:'Home',
+    '/shop':{
+        name:'shop',
+        display:'Shop',
         components:['product_list','pagination'],
     }
 });

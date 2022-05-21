@@ -1,4 +1,3 @@
-const ejs = require('ejs');
 const path = require('path');
 const express =require('express');
 const Router = express.Router();
@@ -7,10 +6,9 @@ const Router = express.Router();
 
 
 Router.use('/', function(req, res, next){
-    const filePath = '../public/home';
-
+    const filePath = '../public/shop';
     if(req.path == '/'){
-        res.render('home',{});
+        res.render('shop',{});
 
     } else {
         express.static(path.join(__dirname,filePath))(req,res,next);

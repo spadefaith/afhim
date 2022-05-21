@@ -1,5 +1,4 @@
-Cake.create('pagination','#pagination',{
-    root:'.product-list-pagination-container',
+Cake.create('overlay-side', '#overlay-side',{
     handlers:{
         destroy(e){
             this.reset();

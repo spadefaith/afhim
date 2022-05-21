@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AFHIM Shop</title>
+
+    <%- include('../partials/meta') %>
+
+
+    <link rel="stylesheet" href="/asset/package/bootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/css/splide.min.css">
+    
+    <link rel="stylesheet" href="/asset/css/product-list.css">
+    <link rel="stylesheet" href="/asset/css/skeleton.css">
+
+    <link rel="stylesheet" href="/asset/css/filter.css">
+    <link rel="stylesheet" href="/asset/css/overlay-side.css">
+    <link rel="stylesheet" href="/asset/css/nav.css">
+    <link rel="stylesheet" href="/asset/css/carousel.css">
+    <link rel="stylesheet" href="/asset/css/theme.css">
+    <link rel="stylesheet" href="/asset/css/custom.css">
+
+
+</head>
+<body>
+    <article class="container-lg">
+        <section id="app" data-component="app">
+            <header>
+
+ 
+                <!-- Navbar -->
+                <%- include('../partials/nav',{active_nav:'shop'}) %>
+                <!-- Navbar -->
+                
+                <!-- Navbar Bottom-->
+                <%- include('../partials/nav-bottom') %>
+                <!-- Navbar Bottom-->
+
+                
+              
+                <!-- Jumbotron -->
+                <%- include('../partials/carousel') %>
+                <!-- Jumbotron -->
+              </header>
+
+              
+
+              <br>
+                <h1 class="text-center">Shop Now</h1>
+              
+                <br>
+
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="breadcrumb-container">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                      <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                      <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                                    </ol>
+                                  </nav>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="toolbar-container" data-component="toolbar" id="toolbar" style="text-align:right">
+                                <div class="btn-group" data-event="~click">
+                                    <a href="#!/filter" class="btn btn-primary active"> 	
+                                        <i class="fa fa-filter"></i>&nbsp;Filter
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+
+
+              <%- include('../partials/home-products') %>
+
+              
+
+              <br>
+
+        </section>
+
+        
+        <%- include('../partials/footer') %>
+
+
+    </article>
+
+
+    <%- include('../partials/components/pagination') %>
+    <%- include('../partials/components/product-list') %>
+    <%- include('../partials/components/skeleton') %>
+    <%- include('../partials/components/spinner') %>
+
+    <template id="overlay-side">
+        <div class="overlay-side-content">
+            <div class="filter-container">
+                
+            </div>
+            <div class="overlay-side-background"></div>
+        </div>
+    </template>
+
+    <template id="filter">
+        <div class="px-1 py-1">
+            <h3>Browse</h3>
+            <hr>
+            <ul class="list-group list-group-light">
+                <li class="list-group-item " data-for="item of filters">
+                  <a class="d-flex justify-content-between align-items-center text-theme1" href="{{item.href}}">
+                        <span>{{item.display}}</span>
+                        <span class="badge badge-primary rounded-pill">{{item.count}}</span>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </template>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/js/splide.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="http://localhost:8794/asset/cake.js"></script>
+    <!-- <script src="asset/package/cake.js"></script> -->
+
+    <script src="/shop/router.js"></script>
+
+    <script src="/asset/components/app.js"></script>
+    <script src="/asset/components/api.js"></script>
+    <script src="/asset/components/carousel.js"></script>
+    <script src="/asset/components/pagination.js"></script>
+    <script src="/asset/components/nav.js"></script>
+    <script src="/asset/components/toolbar.js"></script>
+    <script src="/asset/components/overlay-side.js"></script>
+    <script src="/asset/components/filter.js"></script>
+    <script src="/asset/components/skeleton.js"></script>
+    <script src="/asset/components/alert.js"></script>
+    <script src="/asset/components/spinner.js"></script>
+    <script src="/asset/components/product-list.js"></script>
+</body>
+</html>

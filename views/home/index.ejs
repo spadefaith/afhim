@@ -1,47 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfHIM</title>
+    <title>AFHIM Home</title>
 
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/asset/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/asset/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/asset/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/asset/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/asset/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/asset/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/asset/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/asset/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/asset/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/asset/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/asset/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/asset/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/asset/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/asset/images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#262626">
-    <meta name="msapplication-TileImage" content="/asset/images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#262626">
-
-    <meta property="og:title" content="AFHIM">
-    <meta property="og:site_name" content="AFHIM Clothing">
-    <meta property="og:url" content="http://afhim.herokuapp.com">
-    <meta property="og:description" content="Trending clothes printing services.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="http://afhim.herokuapp.com/asset/images/favicon/apple-icon-180x180.png">
-
-    <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "WebSite",
-        "name": "AFHIM",
-        "alternateName": "AFHIM Clothing",
-        "url": "http://afhim.herokuapp.com"
-      }
-    </script>
-
+    <%- include('../partials/meta') %>
 
 
     <link rel="stylesheet" href="/asset/package/bootstrap/css/mdb.min.css">
@@ -65,7 +27,7 @@
 
  
                 <!-- Navbar -->
-                <%- include('../partials/nav') %>
+                <%- include('../partials/nav',{active_nav:'home'}) %>
                 <!-- Navbar -->
                 
                 <!-- Navbar Bottom-->
@@ -83,7 +45,10 @@
 
               <br>
                 <h1 class="text-center">Trends</h1>
-
+                <div class="container" style="text-align:right">
+                    <a class="text-theme1" href="/shop">See More ></a>
+                </div>
+                <br>
 
 
               <%- include('../partials/home-products') %>
@@ -104,6 +69,7 @@
     <%- include('../partials/components/pagination') %>
     <%- include('../partials/components/product-list') %>
     <%- include('../partials/components/spinner') %>
+    <%- include('../partials/components/skeleton') %>
 
 
 
@@ -112,7 +78,7 @@
     <!-- <script src="http://localhost:8794/asset/cake.js"></script> -->
     <script src="asset/package/cake.js"></script>
 
-    <script src="/router.js"></script>
+    <script src="/shop/router.js"></script>
 
     <script src="/asset/components/app.js"></script>
     <script src="/asset/components/api.js"></script>

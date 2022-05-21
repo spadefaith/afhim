@@ -18,7 +18,7 @@
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent" data-container="dropdown">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0 d-none d-md-none d-lg-block" href="#">
+        <a class="navbar-brand mt-2 mt-lg-0 d-none d-md-none d-lg-block" href="/">
             <img src="/asset/images/logo.png" alt="AFHIM" height="40">
             &nbsp;
             <span>AFHIM Clothing</span>
@@ -26,13 +26,26 @@
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <% if(active_nav == 'home') {%>
+                    <a class="nav-link active" href="/">Home</a>
+                <%} else {%>
+                    <a class="nav-link" href="/">Home</a>
+                <%}%>
+                
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
+                <% if(active_nav == 'shop') {%>
+                    <a class="nav-link active" href="/shop">Shop</a>
+                <%} else {%>
+                    <a class="nav-link" href="/shop">Shop</a>
+                <%}%>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <% if(active_nav == 'contact') {%>
+                    <a class="nav-link active" href="/contact">Contact Us</a>
+                <%} else {%>
+                    <a class="nav-link" href="/contact">Contact Us</a>
+                <%}%>
             </li>
         </ul>
         <!-- Left links -->
@@ -40,7 +53,7 @@
     <!-- Collapsible wrapper -->
 
     <div class=" d-md-block d-lg-none">
-        <a class="navbar-brand middle mt-2 mt-lg-0">
+        <a class="navbar-brand middle mt-2 mt-lg-0" href="/">
             <img src="/asset/images/logo.png" alt="AFHIM" height="40">
             &nbsp;
             <span>AFHIM Clothing</span>

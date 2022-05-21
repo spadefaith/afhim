@@ -1,4 +1,3 @@
-const ejs = require('ejs');
 const path = require('path');
 const express =require('express');
 const Router = express.Router();
@@ -8,7 +7,6 @@ const Router = express.Router();
 
 Router.use('/', function(req, res, next){
     const filePath = '../public/home';
-
     if(req.path == '/'){
         res.render('home',{});
 

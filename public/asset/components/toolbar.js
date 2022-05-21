@@ -1,0 +1,9 @@
+Cake.create('toolbar','#toolbar',{
+    root:'.toolbar-container',
+    handlers:{
+        click(e){
+            console.log(e);
+        }
+    },
+    subscribe:{},
+});
