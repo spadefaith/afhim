@@ -1,0 +1,4 @@
+#carousel .splide__slide image{
+    object-fit: contain;
+    object-position: center;
+}
