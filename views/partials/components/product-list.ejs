@@ -1,0 +1,35 @@
+<template id="product_list">
+
+    <div class="product-list-wrapper">
+        <div class="see-more" style="text-align:right">
+            <a class="text-theme1" href="/shop">See More ></a>
+        </div>
+        <br>
+        <section class="product-list-content">
+        
+            <div class="card hide" data-for="item of products" >
+                <div class="card-body">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <img data-src="{{item.image}}" alt="{{item.category}}">
+                            <div class="quickview">
+                                <a class="btn btn-warning" type="button">Quick View</a>
+                            </div>
+                        </div>
+                        <div class="product-text-container">
+                            <p>{{item.category}}</p>
+                            <p>{{item.title}}</p>
+                            <!-- <p>{{item.description}}</p> -->
+                            <!-- <p>{{item.id}}</p> -->
+                            <p>PHP {{item.price}}</p>
+        
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+</template>

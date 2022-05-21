@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 // app.use('/contact',contactRouter);
 // app.use('/about',aboutRouter);
 // app.use('/store',storeRouter);
-// app.use('/shop',shopRouter);
+app.use('/shop',shopRouter);
 app.use('/',homeRouter);
 
 const server = app.listen(port, (err)=>{

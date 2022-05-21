@@ -1,7 +1,17 @@
 body{
-    background-color: black;
+    background-color: #efefef;
 }
 
 body>article{
-    background-color:white;
+    background-color:#efefef;
+}
+
+.page-item.disabled>a{
+    border-radius: 10px!important;
+    background-color: rgba(0,0,0,0.1)!important;
+    margin-right:10px;
+}
+
+.text-theme1{
+    color:#F95438;
 }
