@@ -5,7 +5,10 @@ Cake.create('api',null,{
         getAllProducts:{
             components:['product_list'],
             handler(e){
-                return fetch('https://fakestoreapi.com/products')
+                return fetch('https://fakestoreapi.com/products',{
+                    method:'GET',
+                    mode:'cors',
+                })
                     .then(res=>res.json())
                     .catch(err=>console.error(err));
             }

@@ -34,9 +34,7 @@ body>article.container-lg{
         z-index: 100;
         width: 100%;
     }
-    #carousel{
-        padding-top:65px;
-    }
+
 }
 
 @media (min-width: 576px) { 
@@ -70,3 +68,7 @@ body>article.container-lg{
 
 
 @media (min-width: 1400px) {}
+
+#carousel{
+    padding-top:65px;
+}

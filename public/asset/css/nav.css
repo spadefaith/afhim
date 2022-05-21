@@ -1,0 +1,29 @@
+.navbar.fixed-bottom{
+    display:block;
+  }
+  .bottom-nav-item-container{
+      border:3px solid rgba(254, 254, 254,0.4);
+      width: 40px;
+      height: 40px;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      color:rgba(254, 254, 254,0.4);
+      transition: all 0.5s ease;
+  }
+  
+  .bottom-nav-item-container:hover{
+    color:rgba(249, 84, 56,0.8);
+    border:3px solid rgba(249, 84, 56,0.8);
+  }
+  
+  .bottom-nav-item-container.active{
+    border:3px solid rgba(249, 84, 56,1);
+    color:rgba(249, 84, 56,1);
+  }
+  
+  .nav-bottom-content{
+    display:grid;
+    grid-auto-flow: column;
+    justify-content:space-around;
+  }
