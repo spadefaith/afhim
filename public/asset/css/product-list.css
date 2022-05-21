@@ -18,21 +18,18 @@
     .product-list-container{
 
         --card-w:120px;
-        --card-h:20em;
+        --card-h:19.2rem;
         --product-desc-fs:0.7rem;
         --product-price-fs:0.8rem;
         --product-desc-m:0.2rem;
         --card-body-p:0.5rem;
         --product-image-h:190px;
-        --product-desc-h:70px;
+        --product-desc-h:30px;
     }
 
 }
 
-@media (min-width: 300px) and (max-width: 991px)   { 
 
-
-}
 
 @media (min-width: 576px) and (max-width: 870px) { 
     .product-list-container{
