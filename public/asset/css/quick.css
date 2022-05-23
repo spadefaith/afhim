@@ -1,0 +1,42 @@
+
+.quick-view-container{
+    padding:1em;
+    overflow: auto;
+    max-width: 900px;
+    --img-margin-top:0rem;
+    --height:90%;
+}
+
+@media (min-width: 300px) and (max-width: 767px)   { 
+    .quick-view{
+        --img-margin-top:3rem;
+        --height:100vh;
+    }
+
+}
+
+.quick-view{
+    height: var(--height);
+}
+
+
+
+
+
+.quick-view .image-container {
+    margin-top:var(--img-margin-top);
+    text-align: center;
+}
+
+.quick-view .text-container{
+    display: grid;
+    grid-template-rows: 1fr 10% max-content;
+    grid-row-gap:20px;
+}
+
+.quick-view .image-container img{
+    object-fit: contain;
+    object-position: center;
+    width:100%;
+    max-width: 400px;
+}

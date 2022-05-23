@@ -1,15 +1,15 @@
 <template id="product_list">
 
 
-    <section class="product-list-content">
+    <section class="product-list-content" data-event="click">
     
         <div class="card hide" data-for="item of products" >
             <div class="card-body">
-                <div class="product">
+                <div class="product" data-product-id="{{item.id}}">
                     <div class="product-image-container">
                         <img data-src="{{item.image}}" alt="{{item.category}}">
                         <div class="quickview">
-                            <a class="btn btn-warning" type="button">Quick View</a>
+                            <a class="btn btn-warning" type="button" data-role="quickview">Quick View</a>
                         </div>
                     </div>
                     <div class="product-text-container">

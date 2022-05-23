@@ -14,7 +14,15 @@ Cake.create('product_list','#product_list',{
             } else {
                 products = await this.fire('getAllProducts');
             };
-            await this.$scope.set('products', products).then(()=>{
+            this.data.products = products;
+
+
+            const _products = JSON.parse(JSON.stringify(products));
+
+            await this.$scope.set('products', _products).then(()=>{
+
+
+
                 this.fire('removeSkeleton');
                 this.fire.showCards();
             });
@@ -39,6 +47,23 @@ Cake.create('product_list','#product_list',{
                     },200);
                 };
             };recur();
+        },
+        click(e){
+            const target = e.target;
+            const role = target.dataset.role;
+            if(role == 'quickview'){
+                const productId = target.closest('.product').dataset.productId;
+
+                if(productId){
+                    const product = this.data.products.find(item=>item.id==productId);
+                    product.ratings = product.rating.rate;
+                    product.stock = product.rating.count;
+
+                    this.fire('renderQuickView',{product,quickview:true});
+
+                };
+            };
+
         }
     },
     subscribe:{},

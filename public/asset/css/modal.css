@@ -1,0 +1,54 @@
+.modal-container{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display: grid;
+    justify-content: center;
+   
+    width: 100%;
+    z-index: 1000;
+
+    --top-margin:5rem;
+}
+
+
+
+@media (min-width: 200px) and (max-width: 767px)   { 
+    .modal-container{
+        --top-margin: 0rem;
+    }
+
+}
+
+
+.modal-container>.modal-background{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity .15s linear;
+    opacity: 0;
+}
+.modal-container>.modal-background.modal-show{
+    opacity: 1;
+}
+.modal-container>.modal-content-dialog{
+    margin-top: -400px;
+    opacity: 0;
+    transition: all .15s linear;
+    transform: scale(0.6)!important;
+    height: max-content;
+}
+.modal-container .modal-content{
+    
+}
+.modal-container>.modal-content-dialog.modal-dialog-show{
+    opacity: 1;
+    margin-top: var(--top-margin);
+    transform: scale(1)!important;
+}

@@ -12,7 +12,7 @@ Cake.create('skeleton','#skeleton',{
             this.reset();
         },
         isConnected(e){
-            console.log('skeleton is connected')
+            console.log('skeleton is connected');
         },
     },
     subscribe:{

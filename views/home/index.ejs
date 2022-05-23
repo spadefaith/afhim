@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="/asset/css/nav.css">
     <link rel="stylesheet" href="/asset/css/carousel.css">
+    <link rel="stylesheet" href="/asset/css/modal.css">
+    <link rel="stylesheet" href="/asset/css/quick.css">
     <link rel="stylesheet" href="/asset/css/theme.css">
     <link rel="stylesheet" href="/asset/css/custom.css">
 
@@ -73,16 +75,162 @@
 
 
 
+    <template id="modal">
+      <div class="modal-container">
+        <div class="modal-background" data-class="show && modal-show" data-event="click:destroy"></div>
+        <div class="modal-content-dialog" data-class="dialog-show && modal-dialog-show">
+          <div class="card modal-content">
+
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="quick-view">
+
+      <div class="quick-view-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-sm-block d-md-none">
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="#" style="padding:0rem 2rem" data-event="click:destroy">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="row quick-view">
+          <div class="col-md-6 col-sm-12 image-container">
+            <img alt='product image' src="" data-bind="src:image" data-container="img"></img>
+          </div>
+          <div class="col-md-6 col-sm-12 text-container">
+            <div class="product-overview">
+              <h3 data-bind="textContent:title" class="mb-2"></h3>
+              <h4>Php&nbsp;<span data-bind="textContent:price">0</span></h4>
+              <p data-bind="textContent:description"></p>
+            </div>
+            <div class="product-selection">
+              <form>
+                <div class="row g-3 align-items-center">
+                  <div class="col-3">
+                    <label for="color" class="col-form-label">Color</label>
+                  </div>
+                  
+                  <div class="col-9">
+                    <select class="form-select" name='color' id="color" aria-label="Default select example">
+                      <option selected>choose color</option>
+                      <option value="1">Black</option>
+                      <option value="2">White</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="product-description">
+              <form>
+                <p>Available Stock : <span data-bind="textContent:stock">0</span></p>
+                <div class="row">
+                  <div class="col-5">
+                    <div class="" style="display:grid;grid-column-gap:4px;grid-auto-flow:column">
+                      <button type="button" class="btn btn-light btn-md btn-floating">-</button>
+                      <input
+                        type="text"
+                        class="form-control"
+                        aria-label="Amount (to the nearest dollar)"
+                        value=1
+                      />
+                      <button type="button" class="btn btn-light btn-md btn-floating">+</button>
+                    </div>
+                  </div>
+                  <div class="col-1"></div>
+                  <div class="col-6">
+                    <div class="d-grid">
+                      <button type="button" class="btn btn-success">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div style="height:20px;"></div>
+              </form>
+  
+              <p>SKU: 1215468</p>
+              <p>Category: <span data-bind="textContent:category"></span></p>
+  
+  
+              <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-lg btn-floating m-1" href="#!" role="button" style="color:gray">
+                    <i class="fab fa fa-facebook-square" ></i>  
+                </a>
+          
+                <!-- Twitter -->
+                <a class="btn btn-lg btn-floating m-1" href="#!" role="button" style="color:gray">
+                    <i class="fab fa fa-twitter-square"></i>    
+                </a>
+        
+                <!-- Instagram -->
+                <a class="btn btn-lg btn-floating m-1" href="#!" role="button" style="color:gray">
+                    <i class="fab fa fa-instagram"></i>
+                </a>
+        
+                <!-- Linkedin -->
+                <a class="btn btn-lg btn-floating m-1" href="#!" role="button" style="color:gray">
+                    <i class="fab fa fa-linkedin-square"></i>
+                </a>
+        
+              </section>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <div class="product-about">
+              <ul class="nav nav-tabs mb-3" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    role="tab"
+                    >Description</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    role="tab"
+                    >Additional Description</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    role="tab"
+                    >Size Cart</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    role="tab"
+                    >Reviews</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/js/splide.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="http://localhost:8794/asset/cake.js"></script> -->
-    <script src="asset/package/cake.js"></script>
+    <script src="http://localhost:8794/asset/cake.js"></script>
+    <!-- <script src="asset/package/cake.js"></script> -->
 
     <script src="/shop/router.js"></script>
 
     <script src="/asset/components/app.js"></script>
     <script src="/asset/components/api.js"></script>
     <script src="/asset/components/carousel.js"></script>
+    <script src="/asset/components/modal.js"></script>
+    <script src="/asset/components/quick-view.js"></script>
     <script src="/asset/components/pagination.js"></script>
     <script src="/asset/components/nav.js"></script>
     <script src="/asset/components/skeleton.js"></script>
